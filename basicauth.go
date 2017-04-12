@@ -1,4 +1,3 @@
-// Package basicauth makes it easy to lock pages behind Basic Authentication.
 package basicauth
 
 import (

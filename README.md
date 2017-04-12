@@ -1,28 +1,7 @@
 # basicauth
 
-Easily lock web pages behind Basic Authentication.
+Easily lock web pages behind Basic Authentication for Golang web applications.
 
-Written in Golang.
+## Docs and Sample Usage
 
-# Sample usage
-
-Here are two example http handlers -- a protected one and a logout one.
-
-```
-var basicAuthUsername = "mylogin"
-var basicAuthPassword = "mypassword"
-
-func adminHandler(w http.ResponseWriter, r *http.Request) {
-	if !basicauth.IsAuthenticated(r, basicAuthUsername, basicAuthPassword) {
-		basicauth.TriggerLogin(w, "Danger Ahead")
-		return
-	}
-
-  // handler continues if user enters correct username and password
-
-}
-
-func logoutHandler(w http.ResponseWriter, r *http.Request) {
-  basicauth.TriggerLogin(w, "Danger Ahead")
-}
-```
+[![GoDoc](https://godoc.org/github.com/briangershon/basicauth?status.svg)](https://godoc.org/github.com/briangershon/basicauth)
